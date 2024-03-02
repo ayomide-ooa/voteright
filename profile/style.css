@@ -1,0 +1,67 @@
+section {
+    padding: 10px;
+}
+.bio-data {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+textarea {
+    width: 250px;
+    height: 18px;
+    max-width: 3500px;
+    max-height: 20px;
+    overflow: hidden;
+}
+.edit-btn {
+    padding: 10px 5px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    transition: 1s ease-in-out;
+    top: 5px;
+}
+.edit-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 2px solid #fff;
+}
+#saveEdit {
+    display: none;
+}
+#addBtn {
+    display: none;
+    margin: 5px;
+    right: 120px;
+}
+.input-type-field {
+    padding: 3px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    right: 120px;
+}
+.drop span {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 5px!important;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+.drop span:hover {
+    box-shadow: 0 6px 20px 0 #ddd, 0 6px 20px 0 #ddd;
+    color: #007700;
+}
+.drop .input-type-field{
+    visibility: hidden;
+}
+.drop:hover .input-type-field{
+    visibility: visible;
+}

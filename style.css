@@ -1,0 +1,109 @@
+@font-face {
+    font-family: font;
+    src: url("fonts/Montserrat-Regular.ttf");
+}
+body {
+   font-family: font;
+   /*direction: ltr;*/
+   background-image: url(bg_video.mp4);
+}
+main {
+    position: relative;
+}
+header {
+    background-color: #007700;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+header h1{
+    display: inline!important;
+    margin-left: 10px;
+    font-weight: 2000;;
+}
+.slogan {
+    float: right;
+    padding: 10px;
+}
+.intro h2 {
+    margin-top: 25%;
+    color: #007700;
+}
+.intro ul {
+    display: inline;
+}
+.intro ul li {
+    display: inline;
+    padding: 5px 15px;
+    font-weight: bolder;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007700;
+}
+
+form {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    padding: 20px;
+    width: max-content;
+    margin: 20px auto;
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+    transition: 1s ease-in-out;
+}
+fieldset {
+    width: 25%;
+    padding: 20px;
+    border: none;
+
+}
+input, button, textarea {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block;
+}
+button {
+    display: inline;
+    margin:  5px auto;
+    width: 48.5%;
+}
+button:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+/********************** LINKS ****************************/
+a {
+    font-weight: 700;
+    color: #007700;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#signForm {
+    display: none;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: opacity(0.05);
+}
+.help-block {
+    background-color: transparent;
+    color: #dc3545!important;
+}

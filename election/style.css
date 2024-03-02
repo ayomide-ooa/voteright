@@ -1,0 +1,26 @@
+.election-polls {
+    display: flex;
+    column-gap: 10px;
+    display: row;
+    height: 600px;
+    background: #666;
+    padding: 20px;
+}
+.poll-details {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.poll:nth-child(3) {
+    height: 600px!important;
+}
+.poll {
+    background-color: red;
+    display: block;
+    height: 400px;
+    width: 50px;
+    margin-bottom: 5px;
+}

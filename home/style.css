@@ -1,0 +1,43 @@
+section {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2rem;
+}
+.selection_pane {
+    display: inline;
+    margin: 10px auto;
+}
+.selection_pane ul li {
+    display: inline;
+    padding: 5px 15px;
+    font-weight: bolder;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007700;
+    cursor: pointer;
+}
+.selection_pane ul li:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+.election-card {
+    width: 18vw;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+}
+.election-card img {
+    width: 100%;
+}
+.election-card span{
+    font-size: 12px;
+    color: rgba(0,0,0,0.9);
+}
+.slogan {
+    color: #fff;
+    text-decoration: none;
+}
