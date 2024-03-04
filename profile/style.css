@@ -34,6 +34,17 @@ textarea {
     margin: 5px;
     right: 120px;
 }
+div.data-box {
+    padding: 3px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    right: 120px;
+    border: 2px solid red;
+}
+
 .input-type-field {
     padding: 3px;
     background-color: #fff;
@@ -59,9 +70,23 @@ textarea {
     box-shadow: 0 6px 20px 0 #ddd, 0 6px 20px 0 #ddd;
     color: #007700;
 }
-.drop .input-type-field{
+/* .drop .input-type-field{
     visibility: hidden;
 }
 .drop:hover .input-type-field{
     visibility: visible;
+} */
+form {
+    /* background-color: #fff; */
+    box-shadow: none!important;
+    border-radius: 0!important;
+    padding: 0!important;
+    width: fit-content!important;
+    margin: 2px auto!important;
+    position: absolute!important;
+    left: 0!important;
+    top: 0!important;
+    transition: none!important;
+    display: flex;
+    flex-direction: row;
 }

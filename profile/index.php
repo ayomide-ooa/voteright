@@ -47,10 +47,11 @@ require_once "../config.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLLS - PROFILE</title>
+    <link rel="icon" href="../icon.png" type="image/x-icon" />
 
     <!-- CSS LINKS -->
-    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
 
     <!-- SCRIPT FILES -->
     <script src="script.js" type="text/javascript"></script>
@@ -63,41 +64,24 @@ require_once "../config.php";
     <main>
         <header>
             <h1> &equiv; PROFILE</h1>
-            <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-            <button class="edit-btn" id="editBtn" onclick="editBtn('saveEdit','editBtn','block',false)">Edit</button>
-            <button type="submit" class="edit-btn" id="saveEdit" onclick="editBtn('editBtn','saveEdit','none',true)">Save</button>
-            <div class="drop">
-            <button class="edit-btn" id="addBtn">&plus;</button>
-            <div class="input-type-field">
-                <span onclick="addNew('text','<?php echo false ? $row['text'] : 'Some Text' ?>')" readonly>Textfield</span>
-                <span onclick="addNew('text','<?php echo false ? $row['address'] : 'Office Address' ?>')" readonly>Address</span>
-                <span onclick="addNew('tel', '<?php echo false ? $row['tel2'] : '+234 000 000 0000' ?>')" readonly>Phone no</span>
-                <span onclick="addNew('email','<?php echo false ? $row['email'] : 'example@abc.com' ?>')" readonly>email</span>
-                <span onclick="addNew('text','<?php echo false ? $row['text'] : 'Text field' ?>')" readonly>Textfield</span>
-            </div>
-            </div>
+            <a href="../home">Home</a>
+            <a href="./edit_profile.php"><button class="edit-btn">Edit</button></a>
         </header>
 
         <section>
                 <img src="../img/image1.jpg" style="margin: 5px auto;" width="250px" alt="image1.jpg" />
                 
             <div class="bio-data" id="bio">
-                <input type="text" name="user_id" id="y" value="id: usr000001" disabled/>
-                <input type="text" name="firstname" value="<?php echo $row['firstname'] ?>" disabled/>
-                <input type="text" name="othername" value="<?php echo $row['othername'] ?>" disabled/>
-                <input type="text" name="lastname" value="<?php echo $row['lastname'] ?>" disabled/>
+                <?php
+                $row['id'] = 'usr' .$row['id']/1000000;
+                $row['password'] = $row['reg_date'] = null;
 
-                <!-- Email & Contact-->
-                <input type="email" name="email" value="<?php echo $row['email'] ?>" disabled/>
-                <input type="tel" name="tel1" value="<?php echo false ? $row['tel1'] : "+234 000 000 0000" ?>" disabled/>
-                <input type="tel" name="tel2" value="<?php echo false ? $row['tel2'] : "+234 000 000 0000" ?>" disabled/>
-
-                <!-- Address -->
-                <textarea name="address1" disabled><?php echo false ? $row['address'] : "Residential Address" ?></textarea>
-                <textarea name="address2" disabled><?php echo false ? $row['address'] : "Permanent Address" ?></textarea>
+                foreach( $row as $i ){
+                   echo "<div class='data-box'>$i</div>";
+                }
+                ?>
             </div>
         </section>
-
     </main>
 </body>
 </html>

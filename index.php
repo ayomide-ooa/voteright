@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLLS - HOME</title>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" href="style.css" />
@@ -56,9 +57,10 @@
 
                 <br />
                 <a target="_blank" style="margin-top: 10px; margin-bottom: 5px;" href="./password_reset.php">Forget password? </a>
-                </div>
+                </div><br />
 
-                <a href="#signForm" onclick="openReg('signForm', 'loginForm')">New Registration!</a><br/>
+                <a href="#signForm" onclick="openReg('signForm', 'loginForm')">New Registration!</a>
+                <br />
 
                 <button type="submit" style="background: #007700; color: #fff;">Login</button>
                 <button type="reset">Cancel</button>
@@ -87,6 +89,14 @@
                 <div class="<?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
                 <label for="lastname">Lastname</label>
                 <input type="text" id="lastname" name="lastname" placeholder="Okunola" value="<?php echo $lastname; ?>" required/>
+                <span class="help-block"><?php echo $lastname_err; ?></span>
+                </div>
+
+                <!-- CHOOSE GENDER -->
+                <div class="<?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
+                <label for="gender">Gender</label>
+                <input type="checkbox" id="gender" name="gender" placeholder="Male" value="<?php echo $lastname; ?>" required/>
+                <input type="checkbox" id="gender" name="gender" placeholder="Female" value="<?php echo $lastname; ?>" required/>
                 <span class="help-block"><?php echo $lastname_err; ?></span>
                 </div>
 
