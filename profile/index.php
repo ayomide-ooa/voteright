@@ -69,12 +69,13 @@ require_once "../config.php";
         </header>
 
         <section>
-                <img src="../img/image1.jpg" style="margin: 5px auto;" width="250px" alt="image1.jpg" />
+                <img src="../img/image1.jpg" width="250px" alt="image1.jpg" />
                 
             <div class="bio-data" id="bio">
+
                 <?php
                 $row['id'] = 'usr' .$row['id']/1000000;
-                $row['password'] = $row['reg_date'] = null;
+                $row['password'] = $row['year_of_birth'] = $row['reg_date'] = null;
 
                 foreach( $row as $i ){
                    echo "<div class='data-box'>$i</div>";

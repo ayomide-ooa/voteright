@@ -79,15 +79,18 @@ require_once "../config.php";
 
         <section>
             <div class="election-card">
+                <h1 onclick="location.href='../create_new/index.html';"><img src="../img/plus.png" /> </h1>
+            </div>
+            <div class="election-card">
                 <img src="../img/image.jpg" alt="Image" />
-                <h3><a herf="#">Election Title for 2023</a></h3>
+                <h3><a href="../election/index.php">Election Title for 2023</a></h3>
                 <span>Starts: 00:00:00</span> |
                 <span>End: 00:00:00</span>
             </div>
 
             <div class="election-card">
                 <img src="../img/image.jpg" alt="Image" />
-                <h3><a herf="#">Election Title for 2023</a></h3>
+                <h3><a href="../election/index.php">Election Title for 2023</a></h3>
                 <span>Starts: 00:00:00</span> |
                 <span>End: 00:00:00</span>
             </div>

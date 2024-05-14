@@ -93,17 +93,42 @@
                 </div>
 
                 <!-- CHOOSE GENDER -->
-                <div class="<?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
-                <label for="gender">Gender</label>
-                <input type="checkbox" id="gender" name="gender" placeholder="Male" value="<?php echo $lastname; ?>" required/>
-                <input type="checkbox" id="gender" name="gender" placeholder="Female" value="<?php echo $lastname; ?>" required/>
-                <span class="help-block"><?php echo $lastname_err; ?></span>
+                <div class="<?php echo (!empty($gender_err)) ? 'has-error' : ''; ?>">
+
+                <span id="gender">
+                <input type="radio" id="male" name="gender" value="male"> 
+                <label for="male">Male</label>
+                </span>
+
+                <span id="gender">
+                <input type="radio" id="female" name="gender" value="female"> 
+                <label for="female">Female</label>
+                </span>
+
+                <span class="help-block"><?php echo $gender_err; ?></span>
+                </div>
+
+                <!-- CHOOSE DATE OF BIRTH -->
+                <div class="<?php echo (!empty($dob_err)) ? 'has-error' : ''; ?>">
+
+                <span id="gender">
+                <label for="dob">Date of Birth</label>s
+                <input type="date" id="dob" name="dob" value="<?php echo $dob; ?>"> 
+                </span>
+
+                <span class="help-block"><?php echo $dob_err; ?></span>
                 </div>
 
                 <div class="<?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="example@email.com" value="<?php echo $email; ?>" required/>
                 <span class="help-block"><?php echo $email_err; ?></span>
+                </div>
+
+                <div class="<?php echo (!empty($tel_err)) ? 'has-error' : ''; ?>">
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" name="tel" placeholder="0705 000 0000" value="<?php echo $tel; ?>" required/>
+                <span class="help-block"><?php echo $tel_err; ?></span>
                 </div>
                 
                 <div class="<?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">

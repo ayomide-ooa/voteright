@@ -6,6 +6,7 @@ body {
    font-family: font;
    /*direction: ltr;*/
    background-image: url(bg_video.mp4);
+   margin: 0!important;
 }
 main {
     position: relative;
@@ -54,23 +55,13 @@ form {
     top: 10vh;
     transition: 1s ease-in-out;
 }
-#loginForm {
-    width: 50%; 
-    display: flex;
-    flex-direction: row;
-}
-#signForm fieldset {
-    width: 50vw; 
-    display: flex;
-    flex-direction: row;
-}
 fieldset {
-    /* width: fit-content; */
+    width: 25%;
     padding: 20px;
     border: none;
 
 }
-input, button, textarea, input[type='checkbox'] {
+input, button, textarea, #gender {
     font-size: 15px;
     font-weight: 700;
     padding: 20px;
@@ -80,7 +71,13 @@ input, button, textarea, input[type='checkbox'] {
     border-radius: 5px;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    display: inline;
+    display: block;
+}
+#gender {
+    display: flex;
+}
+#gender:hover, #gender:active, #gender:focus {
+    border: 2px solid #007700;
 }
 button {
     display: inline;

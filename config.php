@@ -2,7 +2,6 @@
 // CONFIGURATION FILE
 // Creating a database account with the 
 
-
 # Connecting to mySQL database using root
 $server = "localhost";
 $root = "root";
@@ -44,7 +43,7 @@ $connUser = mysqli_connect($server, $user, $password);
 
  else {
 #Creating database if not exist
-$db_voteright = "CREATE DATABASE IF NOT EXISTS voteright";
+$db_voteright = "CREATE DATABASE IF NOT EXISTS voteright DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
 
 if(mysqli_query($connUser, $db_voteright)) {
     $grant_permit_db = "GRANT ALL PRIVILEGES ON 'voteright'.* TO 'Voteright'@'localhost'";
@@ -54,7 +53,7 @@ if(mysqli_query($connUser, $db_voteright)) {
 else {
     die("ERROR: Could not create database. " . mysqli_connect_error());
 }
- }
+}
 
 $database = "voteright";
 
@@ -71,7 +70,11 @@ $user_info = "CREATE TABLE IF NOT EXISTS user_data(
     lastname VARCHAR(25) NOT NULL,
     firstname VARCHAR(25) NOT NULL,
     othername VARCHAR(25),
+    gender VARCHAR(25) NOT NULL,
+    dob VARCHAR(30) NOT NULL,
+    year_of_birth INT(30) NOT NULL,
     email VARCHAR(30) NOT NULL,
+    tel VARCHAR(30) NOT NULL,
     password VARCHAR(225) NOT NULL,
     reg_date TIMESTAMP)";
 
@@ -80,5 +83,31 @@ $user_info = "CREATE TABLE IF NOT EXISTS user_data(
     if(!$conn_user_info) {
         die("Failed! to create table: " . mysqli_error($conn));
         }
-}
-}
+
+// //creating election 
+// $vote_query = "CREATE TABLE IF NOT EXISTS `vote_polls` (
+// 	`id` int(11) NOT NULL AUTO_INCREMENT,
+// 	`title` text NOT NULL,
+// 	`description` text NOT NULL,
+// 	PRIMARY KEY (`id`)
+// ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+// INSERT INTO `polls` (`id`, `title`, `description`) VALUES (1, 'What''s your favorite programming language?', '');
+
+// CREATE TABLE IF NOT EXISTS `vote_poll_ans` (
+// 	`id` int(11) NOT NULL AUTO_INCREMENT,
+// 	`poll_id` int(11) NOT NULL,
+// 	`title` text NOT NULL,
+// 	`votes` int(11) NOT NULL DEFAULT '0',
+// 	PRIMARY KEY (`id`)
+// ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+// INSERT INTO `poll_answers` (`id`, `poll_id`, `title`, `votes`) VALUES (1, 1, 'PHP', 0), (2, 1, 'Python', 0), (3, 1, 'C#', 0), (4, 1, 'Java', 0)";
+
+// $conn_vote_query = mysqli_query($conn, $vote_query);
+
+// if(!$conn_vote_query) {
+//     die("Could not create election table". mysqli_error($conn));
+// }
+
+}}
